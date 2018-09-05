@@ -46,7 +46,7 @@ public class MainActivity extends Activity implements KeyEventListener {
             }
         }
         for (KeyBean keyBean : keyBeans) {
-            if (keyBean.getType() == 0 && !mWriteEnable) {// 再处理按键事件
+            if (keyBean.getType() == 0 && mWriteEnable) {// 再处理按键事件
                 Log.i("Test", StringUtils.toHexString(data, data.length));
                 handlerKeyEvent(keyBean.getKeyCode());
 //                getText(bindService())
